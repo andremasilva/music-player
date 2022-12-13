@@ -1,0 +1,61 @@
+/** @format */
+
+.library {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20rem;
+  height: 100%;
+  background: rgb(245, 249, 250);
+  box-shadow: 2px 2px 50px rgb(177, 174, 174);
+  overflow: scroll;
+  transform: all 0.5s ease;
+  opacity: 0;
+  h2 {
+    padding: 2rem;
+  }
+}
+
+.library-song {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 1rem 2rem 1rem 2rem;
+  cursor: pointer;
+  transition: background 0.5s ease;
+  img {
+    width: 30%;
+  }
+  &:hover {
+    background-color: rgba(172, 210, 224, 0.76);
+  }
+}
+
+.song-descripton {
+  padding: 1rem;
+  h3 {
+    font-size: 1rem;
+  }
+  h4 {
+    font-size: 0.8rem;
+  }
+}
+
+* {
+  scrollbar-width: thin;
+}
+
+.selected {
+  background: rgb(138, 177, 235);
+}
+
+.active-library {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+@media screen and (max-width: 768px) {
+  .library {
+    width: 100%;
+  }
+}
